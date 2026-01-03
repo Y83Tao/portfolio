@@ -1,0 +1,242 @@
+.education-page {
+  color: white;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #ffffff 0%, #a3d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.education-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #5cadff;
+  margin-bottom: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a90e2, #5cadff);
+  border-radius: 2px;
+}
+
+.education-card {
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 16px;
+  padding: 36px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.education-card:hover {
+  background: rgba(74, 144, 226, 0.15);
+  border-color: rgba(74, 144, 226, 0.5);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.25);
+  transform: translateY(-2px);
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.university-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: rgba(255, 213, 79, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 213, 79, 0.3);
+}
+
+.uwaterloo-logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(255, 213, 79, 0.2));
+  transition: all 0.3s;
+}
+
+.education-card:hover .uwaterloo-logo {
+  filter: drop-shadow(0 4px 12px rgba(255, 213, 79, 0.4));
+  transform: scale(1.05);
+}
+
+.education-info {
+  flex: 1;
+}
+
+.institution {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.degree {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+}
+
+.education-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.separator {
+  color: rgba(74, 144, 226, 0.5);
+}
+
+.period,
+.distinction {
+  color: #5cadff;
+  font-weight: 600;
+}
+
+.highlights-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlights-list li {
+  padding: 10px 0;
+  padding-left: 24px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.highlights-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.coursework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.coursework-item {
+  padding: 16px 20px;
+  background: rgba(74, 144, 226, 0.08);
+  border: 1px solid rgba(74, 144, 226, 0.25);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bullet {
+  color: #5cadff;
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .education-page {
+    padding: 40px 16px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .education-card {
+    padding: 28px;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .uwaterloo-logo {
+    width: 100px;
+  }
+
+  .institution {
+    font-size: 22px;
+  }
+
+  .degree {
+    font-size: 15px;
+  }
+
+  .education-meta {
+    flex-wrap: wrap;
+  }
+
+  .coursework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    padding: 24px;
+  }
+
+  .uwaterloo-logo {
+    width: 90px;
+  }
+
+  .institution {
+    font-size: 20px;
+  }
+
+  .degree {
+    font-size: 14px;
+  }
+
+  .highlights-list li,
+  .coursework-item {
+    font-size: 13px;
+  }
+
+  .coursework-grid {
+    grid-template-columns: 1fr;
+  }
+}

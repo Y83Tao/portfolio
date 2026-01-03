@@ -1,0 +1,385 @@
+.experiences-page {
+  color: white;
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #ffffff 0%, #a3d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Sidebar Styles */
+.experience-sidebar {
+  position: sticky;
+  top: 100px;
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 12px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-section {
+  margin-bottom: 32px;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5cadff;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.role-item {
+  padding: 16px;
+  background: rgba(74, 144, 226, 0.08);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.role-item:hover {
+  background: rgba(74, 144, 226, 0.15);
+  border-color: rgba(74, 144, 226, 0.4);
+  transform: translateX(4px);
+}
+
+.role-company {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5cadff;
+  margin-bottom: 4px;
+}
+
+.role-position {
+  font-size: 13px;
+  color: white;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.role-period {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  width: 100%;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 179px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.4) 50%, rgba(74, 144, 226, 0.1) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 160px 40px 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.timeline-date {
+  text-align: left;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.date-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.timeline-marker {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  z-index: 2;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4a90e2;
+  border: 3px solid rgba(0, 5, 16, 1);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5), 0 0 10px rgba(74, 144, 226, 0.3);
+  transition: all 0.3s;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: #5cadff;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.6), 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.timeline-content {
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 8px;
+  padding: 24px 28px;
+  transition: all 0.3s;
+  margin-left: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content:hover {
+  background: rgba(74, 144, 226, 0.15);
+  border-color: rgba(74, 144, 226, 0.5);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.25);
+  transform: translateY(-2px);
+}
+
+.experience-header {
+  margin-bottom: 16px;
+}
+
+.position {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.company {
+  font-size: 16px;
+  color: #5cadff;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 24px;
+}
+
+.responsibilities-list li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.responsibilities-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.technologies {
+  padding-top: 16px;
+  border-top: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.tech-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background: rgba(74, 144, 226, 0.2);
+  border: 1px solid rgba(74, 144, 226, 0.4);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tech-tag:hover {
+  background: rgba(74, 144, 226, 0.3);
+  border-color: rgba(74, 144, 226, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-container {
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+  }
+
+  .experience-sidebar {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .experience-sidebar {
+    position: static;
+    padding: 20px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 24px;
+  }
+
+  .roles-list {
+    gap: 16px;
+  }
+
+  .timeline::before {
+    left: 139px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 120px 40px 1fr;
+    margin-bottom: 40px;
+  }
+
+  .timeline-content {
+    padding: 20px;
+    margin-left: 15px;
+  }
+
+  .position {
+    font-size: 18px;
+  }
+
+  .company {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiences-page {
+    padding: 40px 16px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .timeline-date {
+    padding-right: 0;
+    padding-bottom: 8px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    padding: 18px;
+  }
+
+  .position {
+    font-size: 17px;
+  }
+
+  .company {
+    font-size: 14px;
+  }
+
+  .responsibilities-list li {
+    font-size: 13px;
+  }
+}
